@@ -1,0 +1,25 @@
+<div class="py-4">
+    <h3 class="text-center uppercase text-lg font-bold text-amber-800">
+        Animals Api
+    </h3>
+</div>
+<div class="py-2">
+    <table class="mx-auto">
+        <thead>
+            <tr class="text-sm font-bold text-white bg-gray-900 uppercase">
+                <th class="px-2 py-1">Nombre</th>
+                <th class="px-2 py-1">Tipo de Animal</th>
+                <th class="px-2 py-1">Rango Geografico</th>
+                <th class="px-2 py-1">Esperanza de Vida</th>
+            </tr>
+        </thead>
+        <tbody class="bg-white text-base font-semibold text-indigo-600">
+            <tr *ngFor="let zoos of zoo" [ngClass]="{'falso':zoos.lifespan >= 20}">
+                <th class="px-2 py-1">{{ zoos.name }}</th>
+                <th class="px-2 py-1">{{ zoos.animal_type }}</th>
+                <th class="px-2 py-1">{{ zoos.geo_range }}</th>
+                <th class="px-2 py-1">{{ zoos.lifespan }}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
